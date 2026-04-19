@@ -1,0 +1,16 @@
+# Local presenter notes (private: contains interview quotes + strategic notes)
+speaker-notes.md
+
+# Vercel
+.vercel
+.vercel/
+
+# macOS
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+
+# Node (in case something adds a package.json later)
+node_modules/

@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>From Setup to Habit · Surfe Growth Proposal · Levente Dudás</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Reusable SVG defs (Surfe wordmark, extracted from surfe.com) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="surfe-logo" viewBox="0 0 86 27">
+        <path d="M23.5539 7.98911H28.1025V19.5658C28.1025 22.2288 29.1009 23.5233 31.3198 23.5233C34.0933 23.5233 35.7574 21.3411 35.7574 18.0493V7.98911H40.343V26.4452H35.7574V23.1781C34.3301 25.8287 32.3182 27 29.6926 27C27.5848 27 26.0316 26.3712 25.0331 25.0767C24.0346 23.7822 23.5539 22.2288 23.5539 20.4165V7.98911Z" fill="currentColor"/>
+        <path d="M48.1325 7.9894V12.1442C49.205 9.03734 51.377 7.7671 54.0766 7.7671C54.3724 7.7671 55.1007 7.7671 55.2697 7.7671V11.9839C54.8542 11.9839 53.7905 11.9839 53.3837 11.9839C50.1295 11.9839 48.1325 13.7592 48.1325 17.7537V26.4455H43.5839V7.9894H48.1325Z" fill="currentColor"/>
+        <path d="M81.3775 15.2261C81.1186 11.7124 79.5694 10.5411 77.3591 10.5411C74.9924 10.5411 73.3527 12.0083 72.9459 15.2261H81.3775ZM68.2125 17.0877C68.2125 14.2768 69.026 11.9836 70.6901 10.1713C72.3543 8.35897 74.5731 7.43432 77.2726 7.43432C82.8937 7.43432 86 11.059 86 17.1247V18.185H72.835C72.9829 22.2165 74.8605 23.3013 77.782 23.3013C79.4461 23.3013 80.8267 22.9561 82.3429 20.404L85.8521 21.9329C84.2249 25.2247 81.0446 27 77.6424 27C74.795 27 72.5022 26.1123 70.7641 24.374C69.063 22.6356 68.2125 20.6506 68.2125 17.0877Z" fill="currentColor"/>
+        <path d="M3.94457 17.6301C5.60868 21.1438 7.51933 22.8698 10.7859 22.9931C13.6334 22.9931 16.2097 21.833 16.2097 19.6509C16.2097 17.6906 14.9524 16.3356 11.5502 15.5588L8.62874 14.8561C3.78432 13.6726 1.59015 11.3917 1.59015 7.50819C1.59015 5.47395 2.40372 3.69862 4.06784 2.21917C5.73195 0.739722 8.02473 0 11.242 0C15.5317 0 18.8969 2.03424 20.9309 6.1397L17.011 8.1986C15.4085 5.23971 13.4855 4.00683 11.1557 4.00683C8.04939 4.00683 6.68111 5.28902 6.53319 7.02737C6.53319 8.80271 7.39607 9.97394 10.1696 10.6027L13.128 11.3054C19.0079 12.6739 21.1404 15.4725 21.1404 19.1712C21.1404 21.5013 20.3022 23.3383 18.3792 24.8177C16.4932 26.2602 14.0155 26.9999 11.0201 26.9999C5.65799 26.9999 1.886 24.5218 0 19.7876L3.94457 17.6301Z" fill="currentColor"/>
+        <path d="M62.0923 26.5066L62.1178 11.7171H67.2985V8.01348H62.1178C62.1178 8.01348 61.9421 3.8219 65.0854 3.8219C67.6157 3.8219 68.5057 6.10196 68.5057 6.10196L72.1116 4.3767C70.5708 1.51139 68.2465 0.0616436 64.5307 0.0616436C67.6157 0.0616436 57.5661 2.46574 57.5661 7.99723V26.5066H62.0923Z" fill="currentColor"/>
+      </symbol>
+
+      <symbol id="icon-arrow-right" viewBox="0 0 24 24">
+        <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="icon-arrow-left" viewBox="0 0 24 24">
+        <path d="M19 12H5M11 5L4 12l7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <div class="stage">
+    <div class="canvas" role="region" aria-label="Slide deck">
+
+      <!-- ============================================================
+           Slide 1: Title
+           ============================================================ -->
+      <section class="slide title-slide active" aria-label="Title slide">
+        <div class="title-slide__wave" aria-hidden="true"></div>
+
+        <header class="slide-header">
+          <div class="brand">
+            <svg class="brand__logo" aria-label="Surfe">
+              <use href="#surfe-logo"></use>
+            </svg>
+            <span class="brand__divider"></span>
+            <span class="brand__label">Growth Proposal</span>
+          </div>
+          <span class="pill">
+            <span class="pill__dot"></span>
+            Senior Growth PM · Take-Home
+          </span>
+        </header>
+
+        <div class="title-slide__grid">
+          <div class="title-slide__content">
+            <div class="eyebrow">Add to CRM · Self-serve funnel</div>
+
+            <h1 class="title-slide__title">
+              From setup <span class="title-slide__arrow">→</span> <span class="hl">habit.</span>
+            </h1>
+
+            <p class="title-slide__subtitle">
+              Redesigning the first Surfe session so new users don't just finish onboarding,
+              they leave with a daily workflow. A proposal to grow activation, MAU, and ARR.
+            </p>
+
+            <div class="title-slide__byline">
+              <div class="title-slide__byline-label">Proposal by</div>
+              <div class="title-slide__byline-name">Levente Dudás</div>
+              <div class="title-slide__byline-meta">Senior Growth PM candidate · April 2026</div>
+            </div>
+          </div>
+
+          <!-- Decorative funnel card on the right -->
+          <div class="title-slide__visual" aria-hidden="true">
+            <div class="wave-card">
+              <div class="wave-card__inner">
+                <span class="wave-card__tag">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+                    <path d="M8 12l3 3 5-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  Today's self-serve funnel
+                </span>
+
+                <div class="wave-card__funnel">
+                  <div class="funnel-row">
+                    <span class="funnel-row__label">Signups</span>
+                    <span class="funnel-row__bar"><span class="funnel-row__fill" style="width:100%"></span></span>
+                    <span class="funnel-row__num">100%</span>
+                  </div>
+                  <div class="funnel-row funnel-row--drop">
+                    <span class="funnel-row__label">Connect CRM</span>
+                    <span class="funnel-row__bar"><span class="funnel-row__fill" style="width:60%"></span></span>
+                    <span class="funnel-row__num">60%</span>
+                  </div>
+                  <div class="funnel-row funnel-row--drop">
+                    <span class="funnel-row__label">Install extension</span>
+                    <span class="funnel-row__bar"><span class="funnel-row__fill" style="width:36%"></span></span>
+                    <span class="funnel-row__num">36%</span>
+                  </div>
+                  <div class="funnel-row funnel-row--drop">
+                    <span class="funnel-row__label">Any action</span>
+                    <span class="funnel-row__bar"><span class="funnel-row__fill" style="width:25%"></span></span>
+                    <span class="funnel-row__num">~25%</span>
+                  </div>
+                </div>
+
+                <div class="caption">
+                  ~75% of signups never take a meaningful action
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           Slide 2: Metric framing (X1)
+           ============================================================ -->
+      <section class="slide" aria-label="Metric framing">
+        <header class="slide-header">
+          <div class="brand">
+            <svg class="brand__logo" aria-label="Surfe">
+              <use href="#surfe-logo"></use>
+            </svg>
+            <span class="brand__divider"></span>
+            <span class="brand__label">Part 1 · Framing</span>
+          </div>
+          <span class="caption">01 &middot; Metrics</span>
+        </header>
+
+        <div class="slide-body">
+          <div class="slide-heading">
+            <div class="eyebrow">First, the metric</div>
+            <h2 class="slide-heading__title">
+              MAU is the goal. <br />It's also just one metric on the tree.
+            </h2>
+            <p class="slide-heading__sub">
+              A Growth PM owns the full self-serve funnel. Here's the tree I'd build in month 1 and track throughout.
+            </p>
+          </div>
+
+          <div class="metric-tree">
+            <div class="metric-stage">
+              <div class="metric-stage__label">Acquisition</div>
+              <div class="metric-stage__metric">Signup rate</div>
+              <div class="metric-stage__hint">By source &amp; channel quality</div>
+            </div>
+            <div class="metric-stage">
+              <div class="metric-stage__label">Activation</div>
+              <div class="metric-stage__metric">3 actions, day 1</div>
+              <div class="metric-stage__hint">CRM + install + first action</div>
+            </div>
+            <div class="metric-stage">
+              <div class="metric-stage__label">Conversion</div>
+              <div class="metric-stage__metric">Free &amp; trial → paid</div>
+              <div class="metric-stage__hint">Credits, paywalls, packaging</div>
+            </div>
+            <div class="metric-stage metric-stage--focus">
+              <span class="metric-stage__star">Stated goal</span>
+              <div class="metric-stage__label">Retention</div>
+              <div class="metric-stage__metric">MAU% 40 → 60</div>
+              <div class="metric-stage__hint">Monthly churn, feature depth</div>
+            </div>
+            <div class="metric-stage">
+              <div class="metric-stage__label">Expansion</div>
+              <div class="metric-stage__metric">Seats, top-ups, upgrades</div>
+              <div class="metric-stage__hint">Team invite loops</div>
+            </div>
+          </div>
+
+          <div class="tradeoffs">
+            <div class="tradeoffs__title">
+              <svg class="tradeoffs__icon" viewBox="0 0 24 24" fill="none">
+                <path d="M7 17l-4-4 4-4M17 7l4 4-4 4M3 13h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Tradeoffs<br/>to watch
+            </div>
+            <div class="tradeoff">
+              <div class="tradeoff__pair">Acquisition <span class="tradeoff__arrow">⇄</span> MAU%</div>
+              <div class="tradeoff__note">Easier signup pulls in lower-intent users. % may drop even as absolute active users rise.</div>
+            </div>
+            <div class="tradeoff">
+              <div class="tradeoff__pair">Conversion <span class="tradeoff__arrow">⇄</span> Retention</div>
+              <div class="tradeoff__note">Aggressive paywall or credit limits convert more, but may retain worse.</div>
+            </div>
+            <div class="tradeoff">
+              <div class="tradeoff__pair">Activation speed <span class="tradeoff__arrow">⇄</span> Habit depth</div>
+              <div class="tradeoff__note">Fastest path to "activated" isn't the same as teaching the daily workflow.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           Slide 3: Why Add to CRM + how to validate
+           ============================================================ -->
+      <section class="slide" aria-label="Why Add to CRM">
+        <header class="slide-header">
+          <div class="brand">
+            <svg class="brand__logo" aria-label="Surfe">
+              <use href="#surfe-logo"></use>
+            </svg>
+            <span class="brand__divider"></span>
+            <span class="brand__label">Part 1 · The area</span>
+          </div>
+          <span class="caption">02 &middot; Feature choice</span>
+        </header>
+
+        <div class="slide-body">
+          <div class="slide-heading">
+            <div class="eyebrow">The chosen feature area</div>
+            <h2 class="slide-heading__title slide-heading__title--sm">
+              I'd start with Add to CRM.
+            </h2>
+            <p class="slide-heading__sub">
+              Three reasons why, and three ways I'd stress-test that choice before building anything.
+            </p>
+          </div>
+
+          <div class="why-validate">
+            <div>
+              <div class="why-validate__label">Three reasons why</div>
+              <ol class="why-reasons">
+                <li class="why-reason">
+                  <span class="why-reason__num">1</span>
+                  <div>
+                    <div class="why-reason__headline">It <em>is</em> the activation metric.</div>
+                    <div class="why-reason__detail">
+                      Surfe defines activation as 3 meaningful actions on day 1, and those actions are primarily Add to CRM.
+                    </div>
+                  </div>
+                </li>
+                <li class="why-reason">
+                  <span class="why-reason__num">2</span>
+                  <div>
+                    <div class="why-reason__headline">It's exactly <em>where users stall.</em></div>
+                    <div class="why-reason__detail">
+                      The blank slate lives between setup and this first action. Fix the path to this event, fix the 30% do-nothing.
+                    </div>
+                  </div>
+                </li>
+                <li class="why-reason">
+                  <span class="why-reason__num">3</span>
+                  <div>
+                    <div class="why-reason__headline">Shortest path <em>from signup to retention.</em></div>
+                    <div class="why-reason__detail">
+                      Enrichment, recommendations, integrations all sit downstream. Add to CRM is the gate.
+                    </div>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <div>
+              <div class="why-validate__label">Three ways I'd stress-test it</div>
+              <div class="validate-rows">
+                <div class="validate-row">
+                  <div class="validate-row__label">Talk to</div>
+                  <ul class="validate-row__items">
+                    <li>CS &amp; the <em>do-nothing cohort</em>, microsurveyed in-extension</li>
+                    <li>Recently-activated SDRs: what clicked between install and first Add to CRM?</li>
+                    <li>External SDRs &amp; AEs not on Surfe: <em>walk them through the funnel cold</em></li>
+                  </ul>
+                </div>
+                <div class="validate-row">
+                  <div class="validate-row__label">Look at</div>
+                  <ul class="validate-row__items">
+                    <li><em>Time-to-first-Add-to-CRM</em>, cut by channel, role, CRM choice</li>
+                    <li>Session replay on 50 post-install web app + LinkedIn sessions</li>
+                    <li>Day-1 activators vs non-activators: <em>retention curve</em> delta</li>
+                  </ul>
+                </div>
+                <div class="validate-row">
+                  <div class="validate-row__label">Watch for</div>
+                  <ul class="validate-row__items">
+                    <li><em>"Didn't know what to do"</em> &gt; <em>"couldn't connect"</em> in interviews</li>
+                    <li>Dwell-then-leave post-install, consistent across CRMs (rules out setup)</li>
+                    <li>Support tickets on CRM connection would <em>refute it</em>, point back to setup</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide-footnote">
+            <span class="slide-footnote__bullet"></span>
+            If signals point elsewhere, I pivot: wrong-fit users → targeting, CRM connection pain → integrations.
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           Slide 4: The opportunity
+           ============================================================ -->
+      <section class="slide" aria-label="Opportunity framing">
+        <header class="slide-header">
+          <div class="brand">
+            <svg class="brand__logo" aria-label="Surfe">
+              <use href="#surfe-logo"></use>
+            </svg>
+            <span class="brand__divider"></span>
+            <span class="brand__label">Part 1 · Opportunity</span>
+          </div>
+          <span class="caption">03 &middot; Opportunity</span>
+        </header>
+
+        <div class="slide-body">
+          <div class="slide-heading">
+            <div class="eyebrow">Why this is worth doing first</div>
+            <h2 class="slide-heading__title">
+              One intervention. Three metrics move.
+            </h2>
+          </div>
+
+          <div class="intervention-restate">
+            <div class="intervention-restate__col">
+              <div class="intervention-restate__label">The problem</div>
+              <div class="intervention-restate__text">
+                Setup is easy. The <em>workflow is invisible.</em> 30% of installers never take an action, 75% of signups never experience Surfe's value.
+              </div>
+            </div>
+            <div class="intervention-restate__divider" aria-hidden="true"></div>
+            <div class="intervention-restate__col">
+              <div class="intervention-restate__label intervention-restate__label--accent">My proposal</div>
+              <div class="intervention-restate__text">
+                Replace the blank slate after setup with a <em>guided first prospecting session</em> that lands new users on their first Add to CRM, inside LinkedIn, not on an empty dashboard.
+              </div>
+            </div>
+          </div>
+
+          <div class="opportunity-grid">
+            <div class="opp-card">
+              <div class="opp-card__kicker">Activation</div>
+              <h3 class="opp-card__headline">Halve the do-nothing rate.</h3>
+              <p class="opp-card__body">
+                Users arrive already in the workflow, not staring at a blank screen.
+              </p>
+              <div class="opp-card__metric">
+                <span class="opp-card__metric-value">+2K</span>
+                <span class="opp-card__metric-label">activated users / year</span>
+              </div>
+            </div>
+
+            <div class="opp-card">
+              <div class="opp-card__kicker">Retention &middot; MAU</div>
+              <h3 class="opp-card__headline">First session teaches the habit.</h3>
+              <p class="opp-card__body">
+                Users who learn the daily workflow on day 1 are more likely to repeat it in week 2, month 2, month 6.
+              </p>
+              <div class="opp-card__metric">
+                <span class="opp-card__metric-value">40% → 60%</span>
+                <span class="opp-card__metric-label">MAU% target</span>
+              </div>
+            </div>
+
+            <div class="opp-card opp-card--highlight">
+              <div class="opp-card__kicker">ARR</div>
+              <h3 class="opp-card__headline">Activation lifts volume. Retention compounds it.</h3>
+              <p class="opp-card__body">
+                ~€35&ndash;170K from activation alone. Every 1pp off monthly churn is worth multiples more.
+              </p>
+              <div class="opp-card__metric">
+                <span class="opp-card__metric-value">2×</span>
+                <span class="opp-card__metric-label">ARR if churn halves</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide-footnote">
+            <span class="slide-footnote__bullet"></span>
+            Retention is the bigger lever. Order of magnitude estimates, directional not precise.
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           Slide 5: Today's onboarding problem (before)
+           ============================================================ -->
+      <section class="slide before-slide" aria-label="Today's onboarding problem">
+        <header class="slide-header">
+          <div class="brand">
+            <svg class="brand__logo" aria-label="Surfe">
+              <use href="#surfe-logo"></use>
+            </svg>
+            <span class="brand__divider"></span>
+            <span class="brand__label">Part 2 · Feature design</span>
+          </div>
+          <span class="caption">04 &middot; Today</span>
+        </header>
+
+        <div class="slide-body">
+          <div class="slide-heading">
+            <div class="eyebrow">Today's onboarding</div>
+            <h2 class="slide-heading__title slide-heading__title--sm">
+              Setup before value, features before workflow.
+            </h2>
+            <p class="slide-heading__sub">
+              Three things the current flow asks of a new user before they see anything worth coming back for.
+            </p>
+          </div>
+
+          <div class="before-issues">
+            <div class="issue-card">
+              <div class="issue-card__label"><span class="issue-card__label-dot"></span>Issue 1</div>
+              <div class="issue-card__title">Blank slate after setup.</div>
+              <div class="issue-card__body">
+                Right after CRM connect, the home page is empty except for a CTA to set up a "Co-pilot." No prospects, no workflow, no obvious next click.
+              </div>
+              <div class="issue-card__shot" style="background-image:url('img-blank-home.png')">
+                <span class="issue-card__callout issue-card__callout--bl">Empty state, no prospects</span>
+              </div>
+            </div>
+
+            <div class="issue-card">
+              <div class="issue-card__label"><span class="issue-card__label-dot"></span>Issue 2</div>
+              <div class="issue-card__title">Target customer setup gate.</div>
+              <div class="issue-card__body">
+                Users have to define who they're looking for (size, role, industry) in the abstract, before seeing any real prospect or feeling a single moment of value.
+              </div>
+              <div class="issue-card__shot issue-card__shot--tcp" style="background-image:url('img-tcp-setup.png')">
+                <span class="issue-card__callout issue-card__callout--tl">Abstract filters, no preview</span>
+              </div>
+            </div>
+
+            <div class="issue-card">
+              <div class="issue-card__label"><span class="issue-card__label-dot"></span>Issue 3</div>
+              <div class="issue-card__title">Tour teaches features, not workflow.</div>
+              <div class="issue-card__body">
+                Tooltips point at filters and UI affordances. Nothing shows what a day of prospecting with Surfe actually looks like, or bridges to the extension.
+              </div>
+              <div class="issue-card__shot" style="background-image:url('img-tour-tooltip.png')">
+                <span class="issue-card__callout issue-card__callout--tl">"Let's take a look around"</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="before-takeaway">
+            <div class="before-takeaway__label">My read</div>
+            <div class="before-takeaway__text">
+              Onboarding is <em>setup-first and web-app-only.</em> The extension (the actual daily habit surface) isn't part of the story.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           Slide 6: The redesign, interactive demo of the proposal
+           ============================================================ -->
+      <section class="slide demo-slide" data-interactive="true" data-step="1" data-max-steps="5" aria-label="Onboarding redesign demo">
+        <header class="slide-header">
+          <div class="brand">
+            <svg class="brand__logo" aria-label="Surfe">
+              <use href="#surfe-logo"></use>
+            </svg>
+            <span class="brand__divider"></span>
+            <span class="brand__label">Part 2 · Feature design</span>
+          </div>
+          <span class="caption">05 &middot; Redesign</span>
+        </header>
+
+        <div class="slide-body">
+          <div class="slide-heading">
+            <div class="eyebrow">My redesign: value first, setup later</div>
+            <h2 class="slide-heading__title slide-heading__title--sm">
+              A guided first session, ending in the aha moment.
+            </h2>
+          </div>
+
+          <div class="demo-layout">
+
+            <!-- LEFT: device frame with the demo -->
+            <div class="device">
+              <div class="device__chrome">
+                <div class="device__dots"><span></span><span></span><span></span></div>
+                <div class="device__url">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zM2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20" stroke="currentColor" stroke-width="1.8"/></svg>
+                  <span data-demo-state="1" data-demo-display="inline">app.surfe.com/welcome</span>
+                  <span data-demo-state="2 3 4" data-demo-display="inline">app.surfe.com/dashboard</span>
+                  <span data-demo-state="5" data-demo-display="inline">linkedin.com/in/fargo-wei-cox</span>
+                </div>
+              </div>
+
+              <div class="device__viewport">
+
+                <!-- ===================================================
+                     STATE 1: ICP mini-quiz during onboarding
+                     =================================================== -->
+                <div class="surfe-app" data-demo-state="1">
+                  <aside class="surfe-app__nav">
+                    <div class="surfe-app__nav-logo">S</div>
+                  </aside>
+                  <div class="surfe-app__main">
+                    <div class="icp-quiz">
+                      <div class="icp-quiz__step">Step 3 of 3 · almost there</div>
+                      <div class="icp-quiz__title">Who do you want to prospect?</div>
+                      <div class="icp-quiz__sub">Two quick answers. Your home page loads with matching prospects right after.</div>
+
+                      <div class="icp-quiz__question">
+                        <div class="icp-quiz__label">Typical role you sell to</div>
+                        <div class="icp-quiz__input icp-quiz__input--filled">
+                          <span>VP Sales, Head of Sales, Revenue leaders</span>
+                          <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                        </div>
+                      </div>
+
+                      <div class="icp-quiz__question">
+                        <div class="icp-quiz__label">At what kind of companies</div>
+                        <div class="icp-quiz__input icp-quiz__input--filled">
+                          <span>B2B SaaS · 50 to 500 employees</span>
+                          <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                        </div>
+                      </div>
+
+                      <div class="icp-quiz__actions">
+                        <a class="icp-quiz__skip">Skip, show me anyone</a>
+                        <div class="icp-quiz__cta">Build my home →</div>
+                      </div>
+
+                      <div class="icp-quiz__fallback">
+                        <strong>If skipped:</strong> home loads with well-known tech contacts: Sam Altman, Dario Amodei, Surfe's founders David Chevalier and Romain Ginestou. Demo session, never a blank page.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ===================================================
+                     STATES 2, 3, 4: Populated dashboard
+                     =================================================== -->
+                <div class="surfe-app" data-demo-state="2 3 4">
+                  <aside class="surfe-app__nav">
+                    <div class="surfe-app__nav-logo">S</div>
+                    <div class="surfe-app__nav-icon is-active" title="Home">
+                      <svg viewBox="0 0 24 24" fill="none"><path d="M3 12l9-9 9 9M5 10v10h14V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div class="surfe-app__nav-icon" title="Search">
+                      <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <div class="surfe-app__nav-icon" title="Lists">
+                      <svg viewBox="0 0 24 24" fill="none"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <div class="surfe-app__nav-icon" title="Analytics">
+                      <svg viewBox="0 0 24 24" fill="none"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                  </aside>
+
+                  <div class="surfe-app__main">
+                    <div class="dash-top">
+                      <div>
+                        <div class="dash-greeting" data-demo-state="2" data-demo-display="block">It's a good time to approach these prospects.</div>
+                        <div class="dash-greeting" data-demo-state="3" data-demo-display="block">Your first contact, in your CRM.</div>
+                        <div class="dash-greeting" data-demo-state="4" data-demo-display="block">Now try the pattern on LinkedIn.</div>
+                        <div class="dash-sub" data-demo-state="2" data-demo-display="block">3 companies matching what you picked. Expand to see their key contacts.</div>
+                        <div class="dash-sub" data-demo-state="3" data-demo-display="block">That's the aha moment. The same pattern works on LinkedIn too.</div>
+                        <div class="dash-sub" data-demo-state="4" data-demo-display="block">Open Fargo's LinkedIn profile. The Surfe sidebar is ambient there, ready to sync.</div>
+                      </div>
+                      <div class="dash-progress" data-demo-state="2">
+                        <div class="dash-progress__bar"><div class="dash-progress__fill" style="width:0%"></div></div>
+                        <span>0 of 3 today</span>
+                      </div>
+                      <div class="dash-progress" data-demo-state="3 4">
+                        <div class="dash-progress__bar"><div class="dash-progress__fill" style="width:33%"></div></div>
+                        <span>1 of 3 today</span>
+                      </div>
+                    </div>
+
+                    <!-- LinkedIn nudge strip visible on the dashboard (state 2 only, before sync) -->
+                    <div class="dash-linkedin-nudge" data-demo-state="2">
+                      <span class="dash-linkedin-nudge__icon">in</span>
+                      <span><strong>Also browsing LinkedIn?</strong> The Surfe sidebar is ambient there too. Same sync, one click.</span>
+                    </div>
+
+                    <!-- STATE 2: populated dashboard, one company expanded -->
+                    <div class="dash-company-list" data-demo-state="2">
+                      <div class="dash-company is-open">
+                        <div class="dash-company__row">
+                          <div class="dash-company__logo dash-company__logo--p">P</div>
+                          <div class="dash-company__info">
+                            <div class="dash-company__name">Pactum</div>
+                            <div class="dash-company__meta">B2B SaaS · 120 employees</div>
+                          </div>
+                          <div class="dash-company__tags">
+                            <span class="dash-chip dash-chip--match">Strong match</span>
+                            <span class="dash-chip dash-chip--hire">New hire</span>
+                          </div>
+                          <svg class="dash-company__chevron" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                        </div>
+                        <div class="dash-company__contacts">
+                          <div class="dash-contact is-hovered">
+                            <div class="dash-contact__avatar">AL</div>
+                            <div class="dash-contact__info">
+                              <div class="dash-contact__name">Anna Linden</div>
+                              <div class="dash-contact__title">Director, Product Marketing</div>
+                            </div>
+                            <button class="dash-contact__sync-btn">
+                              <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M4 4v6h6M20 20v-6h-6M4 10a8 8 0 0114-4M20 14a8 8 0 01-14 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                              Sync as Contact
+                            </button>
+                          </div>
+                          <div class="dash-contact">
+                            <div class="dash-contact__avatar" style="background:linear-gradient(135deg,var(--wave-pink-200),var(--wave-pink-100));color:var(--wave-pink-600)">FW</div>
+                            <div class="dash-contact__info">
+                              <div class="dash-contact__name">Fargo Wei-Cox</div>
+                              <div class="dash-contact__title">Chief Product Officer</div>
+                            </div>
+                            <span></span>
+                          </div>
+                          <div class="dash-contact">
+                            <div class="dash-contact__avatar" style="background:linear-gradient(135deg,var(--wave-orange-500),var(--wave-sunset-200));color:var(--wave-blue-900)">BT</div>
+                            <div class="dash-contact__info">
+                              <div class="dash-contact__name">Brian Taulbee</div>
+                              <div class="dash-contact__title">Senior Director, Product</div>
+                            </div>
+                            <span></span>
+                          </div>
+                          <div class="dash-contact">
+                            <div class="dash-contact__avatar" style="background:linear-gradient(135deg,var(--wave-purple-500),var(--wave-purple-100));color:var(--wave-purple-600)">LK</div>
+                            <div class="dash-contact__info">
+                              <div class="dash-contact__name">Layla Kidear</div>
+                              <div class="dash-contact__title">Chief People Officer</div>
+                            </div>
+                            <span></span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="dash-company">
+                        <div class="dash-company__row">
+                          <div class="dash-company__logo dash-company__logo--pf">PF</div>
+                          <div class="dash-company__info">
+                            <div class="dash-company__name">PowerFleet</div>
+                            <div class="dash-company__meta">Fleet management · 380 employees</div>
+                          </div>
+                          <div class="dash-company__tags">
+                            <span class="dash-chip dash-chip--match">Strong match</span>
+                            <span class="dash-chip dash-chip--key">Key contacts</span>
+                          </div>
+                          <svg class="dash-company__chevron" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                        </div>
+                      </div>
+
+                      <div class="dash-company">
+                        <div class="dash-company__row">
+                          <div class="dash-company__logo dash-company__logo--v">V</div>
+                          <div class="dash-company__info">
+                            <div class="dash-company__name">Viz</div>
+                            <div class="dash-company__meta">Healthcare AI · 210 employees</div>
+                          </div>
+                          <div class="dash-company__tags">
+                            <span class="dash-chip dash-chip--match">Strong match</span>
+                          </div>
+                          <svg class="dash-company__chevron" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- STATE 3: sync happened on first contact, progress to 1/3 -->
+                    <div class="dash-company-list" data-demo-state="3">
+                      <div class="dash-company is-open">
+                        <div class="dash-company__row">
+                          <div class="dash-company__logo dash-company__logo--p">P</div>
+                          <div class="dash-company__info">
+                            <div class="dash-company__name">Pactum</div>
+                            <div class="dash-company__meta">B2B SaaS · 120 employees</div>
+                          </div>
+                          <div class="dash-company__tags">
+                            <span class="dash-chip dash-chip--match">Strong match</span>
+                          </div>
+                          <svg class="dash-company__chevron" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                        </div>
+                        <div class="dash-company__contacts">
+                          <div class="dash-contact dash-contact--done">
+                            <div class="dash-contact__avatar">AL</div>
+                            <div class="dash-contact__info">
+                              <div class="dash-contact__name">Anna Linden</div>
+                              <div class="dash-contact__title">Synced to HubSpot</div>
+                            </div>
+                            <div class="dash-contact__done"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                          </div>
+                          <div class="dash-contact is-hovered">
+                            <div class="dash-contact__avatar" style="background:linear-gradient(135deg,var(--wave-pink-200),var(--wave-pink-100));color:var(--wave-pink-600)">FW</div>
+                            <div class="dash-contact__info">
+                              <div class="dash-contact__name">Fargo Wei-Cox</div>
+                              <div class="dash-contact__title">Chief Product Officer</div>
+                            </div>
+                            <button class="dash-contact__sync-btn">
+                              <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M4 4v6h6M20 20v-6h-6M4 10a8 8 0 0114-4M20 14a8 8 0 01-14 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                              Sync as Contact
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="dash-company">
+                        <div class="dash-company__row">
+                          <div class="dash-company__logo dash-company__logo--pf">PF</div>
+                          <div class="dash-company__info">
+                            <div class="dash-company__name">PowerFleet</div>
+                            <div class="dash-company__meta">Fleet management · 380 employees</div>
+                          </div>
+                          <div class="dash-company__tags">
+                            <span class="dash-chip dash-chip--match">Strong match</span>
+                            <span class="dash-chip dash-chip--key">Key contacts</span>
+                          </div>
+                          <svg class="dash-company__chevron" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- STATE 4: teaching bridge — you synced here, now try on LinkedIn -->
+                    <div class="dash-company-list" data-demo-state="4">
+                      <div class="dash-company is-open">
+                        <div class="dash-company__row">
+                          <div class="dash-company__logo dash-company__logo--p">P</div>
+                          <div class="dash-company__info">
+                            <div class="dash-company__name">Pactum</div>
+                            <div class="dash-company__meta">B2B SaaS · 120 employees</div>
+                          </div>
+                          <div class="dash-company__tags">
+                            <span class="dash-chip dash-chip--match">Strong match</span>
+                          </div>
+                          <svg class="dash-company__chevron" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                        </div>
+                        <div class="dash-company__contacts">
+                          <div class="dash-contact dash-contact--done">
+                            <div class="dash-contact__avatar">AL</div>
+                            <div class="dash-contact__info">
+                              <div class="dash-contact__name">Anna Linden</div>
+                              <div class="dash-contact__title">Synced to HubSpot</div>
+                            </div>
+                            <div class="dash-contact__done"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="dash-teaching">
+                        <div class="dash-teaching__icon">↗</div>
+                        <div class="dash-teaching__body">
+                          <div class="dash-teaching__title">Nice. Now try Fargo on LinkedIn.</div>
+                          <div class="dash-teaching__text">Same Sync as Contact, ambient in the sidebar on any LinkedIn profile. Once you learn the pattern, you can stay in LinkedIn and never come back to the dashboard if you don't want to.</div>
+                        </div>
+                        <a class="dash-teaching__cta">
+                          Open Fargo's profile
+                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M7 7h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                        </a>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- ===================================================
+                     STATE 5: LinkedIn extension showcase — same pattern, ambient
+                     =================================================== -->
+                <div class="li-bg" data-demo-state="5">
+                  <div class="li-bg__topbar">
+                    <div class="li-bg__logo">in</div>
+                    <div class="li-bg__search">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                      Search
+                    </div>
+                    <div class="li-bg__nav"><span></span><span></span><span></span><span></span></div>
+                  </div>
+                  <div class="li-bg__content">
+                    <div class="li-bg__profile">
+                      <div class="li-bg__banner"></div>
+                      <div class="li-bg__avatar"></div>
+                      <div class="li-bg__lines">
+                        <div class="li-bg__line li-bg__line--lg"></div>
+                        <div class="li-bg__line li-bg__line--md"></div>
+                        <div class="li-bg__line li-bg__line--sm"></div>
+                      </div>
+                      <div class="li-bg__lines" style="margin-top: 12px">
+                        <div class="li-bg__line"></div>
+                        <div class="li-bg__line" style="width: 80%"></div>
+                        <div class="li-bg__line" style="width: 70%"></div>
+                      </div>
+                    </div>
+                    <div style="display:flex;flex-direction:column;gap:12px">
+                      <div class="li-bg__card"><div class="li-bg__line li-bg__line--md"></div><div class="li-bg__line li-bg__line--sm"></div></div>
+                      <div class="li-bg__card"><div class="li-bg__line li-bg__line--md"></div><div class="li-bg__line li-bg__line--sm"></div></div>
+                    </div>
+                  </div>
+                </div>
+
+                <aside class="surfe-sidebar" data-demo-state="5">
+                  <div class="surfe-sidebar__header">
+                    <div class="surfe-sidebar__logo">S</div>
+                    <span class="surfe-sidebar__title">Surfe</span>
+                    <span class="surfe-sidebar__counter">Anytime</span>
+                  </div>
+                  <div class="surfe-sidebar__body">
+                    <div class="prospect prospect--focus" style="padding:10px">
+                      <div class="prospect__avatar" style="background:linear-gradient(135deg,var(--wave-pink-200),var(--wave-pink-100));color:var(--wave-pink-600)">FW</div>
+                      <div class="prospect__info">
+                        <div class="prospect__name">Fargo Wei-Cox</div>
+                        <div class="prospect__meta">Chief Product Officer · Pactum</div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="surfe-sidebar__eyebrow">Surfe found</div>
+                      <div class="surfe-sidebar__headline" style="margin-top:4px; font-size:14px">Verified contact details</div>
+                    </div>
+                    <div class="enrich-block">
+                      <div class="enrich-row">
+                        <span class="enrich-row__label">Email</span>
+                        <span class="enrich-row__value enrich-row__value--found">fargo@pactum.com ✓</span>
+                      </div>
+                      <div class="enrich-row">
+                        <span class="enrich-row__label">Mobile</span>
+                        <span class="enrich-row__value enrich-row__value--found">+372 5 ••• 9217 ✓</span>
+                      </div>
+                    </div>
+                    <div class="sidebar-cta sidebar-cta--pulse">Sync as Contact</div>
+                    <div style="margin-top:auto;font-size:10px;color:var(--gray-500);text-align:center;line-height:1.4">
+                      Same sync. Any LinkedIn profile. No tab switch.
+                    </div>
+                  </div>
+                </aside>
+              </div>
+            </div>
+
+            <!-- RIGHT: step list + annotation -->
+            <div class="demo-panel">
+              <div class="demo-stepper">
+                <div class="demo-step-pill" data-step-pill="1">
+                  <span class="demo-step-pill__num">1</span>
+                  <span class="demo-step-pill__text">2-question target quiz in onboarding</span>
+                </div>
+                <div class="demo-step-pill" data-step-pill="2">
+                  <span class="demo-step-pill__num">2</span>
+                  <span class="demo-step-pill__text">Dashboard loads populated</span>
+                </div>
+                <div class="demo-step-pill" data-step-pill="3">
+                  <span class="demo-step-pill__num">3</span>
+                  <span class="demo-step-pill__text">First Sync as Contact &middot; the aha moment</span>
+                </div>
+                <div class="demo-step-pill" data-step-pill="4">
+                  <span class="demo-step-pill__num">4</span>
+                  <span class="demo-step-pill__text">Teaching bridge &middot; try the same on LinkedIn</span>
+                </div>
+                <div class="demo-step-pill" data-step-pill="5">
+                  <span class="demo-step-pill__num">5</span>
+                  <span class="demo-step-pill__text">Same sync pattern, now in the extension</span>
+                </div>
+              </div>
+
+              <div class="demo-annotation">
+                <span class="demo-annotation__label">Why this moment</span>
+                <p class="demo-annotation__text" data-demo-state="1" data-demo-display="block">
+                  <em>Move the target quiz into onboarding</em>, 2 questions. Skip lands on famous tech + Surfe founders (Altman, Amodei, Chevalier, Ginestou). Never blank.
+                </p>
+                <p class="demo-annotation__text" data-demo-state="2" data-demo-display="block">
+                  User arrives from the quiz. Dashboard is <em>populated with ICP-matching companies</em>. Expand a company to reveal key contacts.
+                </p>
+                <p class="demo-annotation__text" data-demo-state="3" data-demo-display="block">
+                  Hover a contact, <em>Sync as Contact</em> appears. One click and it's in HubSpot. This is <em>the aha</em>: value in under 2 minutes from signup.
+                </p>
+                <p class="demo-annotation__text" data-demo-state="4" data-demo-display="block">
+                  A deliberate <em>teaching bridge</em>: "nice, now try Fargo on LinkedIn." Tutorial on a contact they <em>haven't</em> synced yet. Learn the pattern on dashboard, apply it on LinkedIn.
+                </p>
+                <p class="demo-annotation__text" data-demo-state="5" data-demo-display="block">
+                  Fargo's LinkedIn profile. Surfe sidebar already open with the <em>same pulsing Sync as Contact</em>. One click, same result, no tab switch. Habit learned.
+                </p>
+              </div>
+
+              <div class="demo-hint">
+                <span class="demo-hint__key">→</span>
+                <span>advances the demo, then the slide when finished</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           Slide 7: MVP scope (v1 / later / out of scope)
+           ============================================================ -->
+      <section class="slide" aria-label="MVP scope">
+        <header class="slide-header">
+          <div class="brand">
+            <svg class="brand__logo" aria-label="Surfe"><use href="#surfe-logo"></use></svg>
+            <span class="brand__divider"></span>
+            <span class="brand__label">Part 2 · Scope</span>
+          </div>
+          <span class="caption">06 &middot; Scope</span>
+        </header>
+
+        <div class="slide-body">
+          <div class="slide-heading">
+            <div class="eyebrow">MVP scope</div>
+            <h2 class="slide-heading__title slide-heading__title--sm">
+              Focus on habit forming.
+            </h2>
+          </div>
+
+          <div class="scope-grid">
+            <div class="scope-col scope-col--primary">
+              <div class="scope-col__kicker">v1 · Ships first</div>
+              <div class="scope-col__title">The populated dashboard + the first sync.</div>
+              <div class="scope-col__timing">~2 weeks, small empowered team</div>
+              <ul class="scope-col__list">
+                <li>Target quiz at the end of onboarding (2 questions)</li>
+                <li>Dashboard populated with ICP-matching companies on arrival</li>
+                <li>Famous-tech fallback for skippers</li>
+                <li>Hover-sync on contact cards (existing Surfe pattern)</li>
+                <li>"X of 3 today" progress tracker</li>
+                <li>LinkedIn sidebar nudge on the dashboard</li>
+                <li>Event instrumentation across the new funnel</li>
+              </ul>
+            </div>
+
+            <div class="scope-col scope-col--secondary">
+              <div class="scope-col__kicker">v2 · After v1 learnings</div>
+              <div class="scope-col__title">Deepen the habit.</div>
+              <div class="scope-col__timing">Scope decided after first A/B reads</div>
+              <ul class="scope-col__list">
+                <li>Seed logic tuning from sync / dismiss signals</li>
+                <li>Re-engagement nudges for day 2, day 7 drop-offs</li>
+                <li>Cross-surface progress sync (dashboard ↔ extension)</li>
+                <li>Richer target refinement inside the dashboard</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="scope-footer">
+            <span class="scope-footer__label">Keep the scope clean</span>
+            <span class="scope-footer__divider"></span>
+            <span>This is one hypothesis test. Bundling extension UX, enrichment changes, pricing tweaks or integration work muddies what we learn from the A/B.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           Slide 8: Technical + cross-functional execution
+           ============================================================ -->
+      <section class="slide" aria-label="Execution plan">
+        <header class="slide-header">
+          <div class="brand">
+            <svg class="brand__logo" aria-label="Surfe"><use href="#surfe-logo"></use></svg>
+            <span class="brand__divider"></span>
+            <span class="brand__label">Part 3 · Execution</span>
+          </div>
+          <span class="caption">07 &middot; Execution</span>
+        </header>
+
+        <div class="slide-body">
+          <div class="slide-heading">
+            <div class="eyebrow">How we'd ship it</div>
+            <h2 class="slide-heading__title slide-heading__title--sm">
+              2 weeks, synchronously, one small team.
+            </h2>
+          </div>
+
+          <div class="exec-layout">
+            <div class="exec-left">
+              <div class="build-stack">
+                <div class="build-label">What we build, in parallel</div>
+
+                <div class="build-row">
+                  <div class="build-row__who">
+                    <span class="build-row__who-title">PM + Design</span>
+                    <span class="build-row__who-size">~80% dedicated designer</span>
+                  </div>
+                  <div class="build-row__what">
+                    Co-design the <strong>target quiz + dashboard arrival</strong>. Reuse existing Wave components, no new CSS surface.
+                  </div>
+                </div>
+
+                <div class="build-row">
+                  <div class="build-row__who">
+                    <span class="build-row__who-title">Engineering</span>
+                    <span class="build-row__who-size">2 FE + 1 BE</span>
+                  </div>
+                  <div class="build-row__what">
+                    <strong>ICP match query, quiz capture, dashboard state, event layer.</strong> Ship a feature-flagged slice every few days.
+                  </div>
+                </div>
+
+                <div class="build-row">
+                  <div class="build-row__who">
+                    <span class="build-row__who-title">Data + QA</span>
+                    <span class="build-row__who-size">in parallel</span>
+                  </div>
+                  <div class="build-row__what">
+                    Stand up <strong>session replay + funnel dashboards</strong> on day 1. Same tools we'll read the A/B with.
+                  </div>
+                </div>
+              </div>
+
+              <div class="along-band">
+                <span class="along-band__label">Bringing them<br/>along the journey</span>
+
+                <div class="along-item">
+                  <span class="along-item__who">Design</span>
+                  <span class="along-item__how">
+                    Paired <strong>from day 0</strong>. I bring problems, they own the solution. Reviews every 2 days, design leads the visual-system calls.
+                  </span>
+                </div>
+
+                <div class="along-item">
+                  <span class="along-item__who">Engineering</span>
+                  <span class="along-item__how">
+                    Unknowns doc owned <strong>jointly</strong> from week 0. Tradeoffs decided in the open. Eng leads arch; I back them and unblock. Demo-every-Friday.
+                  </span>
+                </div>
+
+                <div class="along-item">
+                  <span class="along-item__who">Support / CS</span>
+                  <span class="along-item__how">
+                    <strong>Dogfood the beta</strong> in sprint 1. Co-write the FAQ + canned replies <strong>before</strong> launch. Weekly readout with CS leads the first month post-launch.
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="unknowns">
+              <span class="unknowns__title">Unknowns to validate first</span>
+              <div class="unknowns__sub">Week 0, before any feature code.</div>
+              <ul class="unknowns__list">
+                <li>Is the companies/contacts endpoint fast enough to load 3 ICP-matching rows on dashboard mount?</li>
+                <li>Can the extension reliably access recent LinkedIn profile views across session states? (seed fallback covers us if not)</li>
+                <li>What's the webhook path from extension sync back to the dashboard's progress state?</li>
+                <li>Tour tooltips from today's onboarding will collide. Do we remove them cleanly, or A/B the transition?</li>
+                <li>Target quiz answer model: fixed roles/industries (fast) or freeform (accurate)? Need eng + design call.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           Slide 9: Measurement + experiment design (Part 4)
+           ============================================================ -->
+      <section class="slide measure-slide" aria-label="Measurement plan">
+        <header class="slide-header">
+          <div class="brand">
+            <svg class="brand__logo" aria-label="Surfe"><use href="#surfe-logo"></use></svg>
+            <span class="brand__divider"></span>
+            <span class="brand__label">Part 4 · Measurement</span>
+          </div>
+          <span class="caption">08 &middot; Measurement</span>
+        </header>
+
+        <div class="slide-body">
+          <div class="slide-heading">
+            <div class="eyebrow">Measuring success</div>
+            <h2 class="slide-heading__title slide-heading__title--sm">
+              One primary metric. Many to watch. Strict test length.
+            </h2>
+          </div>
+
+          <div class="measure-layout">
+            <div class="metric-col metric-col--primary">
+              <div class="metric-col__label">Primary metric</div>
+              <div class="metric-item">
+                <div class="metric-item__name">Day-1 activation rate <small>3 "Add to CRM" actions within 24h of signup, from ~25% baseline</small></div>
+                <div class="metric-item__target">+5% rel.</div>
+              </div>
+
+              <div class="metric-test">
+                <strong>Test design:</strong> 50/50 A/B across the entire funnel, all new signups. MDE <strong>5% relative</strong> on day-1 activation at 80% power, ~19K users per arm.<br/><br/>
+                <strong>Length is set by the slowest metric:</strong> activation reads in ~4-6 weeks, paid conversion needs <strong>12-16 weeks minimum</strong>. We commit to the full length before starting, no early calls.
+              </div>
+            </div>
+
+            <div class="metric-col">
+              <div class="metric-col__label">Counter &amp; guardrail metrics</div>
+              <div class="metric-item">
+                <div class="metric-item__name">Retention curve <small>day 7, week 2, week 4. Depth of the habit, not just the spike.</small></div>
+                <div class="metric-item__target">watch</div>
+              </div>
+              <div class="metric-item">
+                <div class="metric-item__name">Trial-to-paid conversion <small>slowest, noisiest, most consequential lagging metric</small></div>
+                <div class="metric-item__target metric-item__target--warn">watch</div>
+              </div>
+              <div class="metric-item">
+                <div class="metric-item__name">Early cancellations (&lt; 30 days) <small>activating low-intent users would drive this up</small></div>
+                <div class="metric-item__target metric-item__target--warn">counter</div>
+              </div>
+              <div class="metric-item">
+                <div class="metric-item__name">Signup → onboarded conversion <small>did the new quiz cost us anyone at the top?</small></div>
+                <div class="metric-item__target metric-item__target--warn">counter</div>
+              </div>
+              <div class="metric-item">
+                <div class="metric-item__name">Usage depth <small>credits consumed + outreach on synced contacts. Are reps actually prospecting, or hoarding?</small></div>
+                <div class="metric-item__target">watch</div>
+              </div>
+              <div class="metric-item">
+                <div class="metric-item__name">Support ticket volume <small>unexpected confusion during the transition</small></div>
+                <div class="metric-item__target">watch</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="phases">
+            <div class="phase">
+              <span class="phase__num">Phase 1</span>
+              <span class="phase__label">Build visibility</span>
+              <span class="phase__time">~3 weeks · Instrumentation, dashboards, session replay, experimentation tooling stood up</span>
+            </div>
+            <div class="phase">
+              <span class="phase__num">Phase 2</span>
+              <span class="phase__label">50/50 A/B, full funnel</span>
+              <span class="phase__time">12-16 weeks min · Strict, don't stop on activation signal. Paid conversion drives length.</span>
+            </div>
+            <div class="phase">
+              <span class="phase__num">Phase 3</span>
+              <span class="phase__label">Soft launch, A/B preserved</span>
+              <span class="phase__time">If activation signal is clear: new experience for 100% of NEW signups. A/B cohort stays intact for lagging reads.</span>
+            </div>
+            <div class="phase">
+              <span class="phase__num">Ongoing</span>
+              <span class="phase__label">Iterate on what we learn</span>
+              <span class="phase__time">Signal-driven, not scheduled. Surprises on primary or guardrail metrics trigger a focused iteration, same test rigor as v1.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           Slide 10: Beyond this feature + honest MAU take (X1)
+           ============================================================ -->
+      <section class="slide" aria-label="Beyond this feature">
+        <header class="slide-header">
+          <div class="brand">
+            <svg class="brand__logo" aria-label="Surfe"><use href="#surfe-logo"></use></svg>
+            <span class="brand__divider"></span>
+            <span class="brand__label">Beyond this feature</span>
+          </div>
+          <span class="caption">09 &middot; Beyond</span>
+        </header>
+
+        <div class="slide-body">
+          <div class="slide-heading">
+            <div class="eyebrow">A Growth PM's wider menu</div>
+            <h2 class="slide-heading__title slide-heading__title--sm">
+              Bigger levers, if given the full mandate.
+            </h2>
+          </div>
+
+          <div class="levers-grid">
+            <div class="lever-card lever-card--bold">
+              <div class="lever-card__content">
+                <span class="lever-card__stage">Acquisition · Boldest bet</span>
+                <div class="lever-card__title">Open up the funnel. Try before signup.</div>
+                <div class="lever-card__body">
+                  Let visitors enrich one LinkedIn contact or export to Sheets before creating an account. A no-CRM, no-email demo mode. Big bet: blurs the signup boundary, distorts every funnel metric for months, but could rebuild acquisition from scratch.
+                </div>
+                <div class="lever-card__targets">Targets: signup drop-off (40%), quality of signups, self-serve revenue</div>
+              </div>
+              <div class="lever-card__badge">Highest<br/>upside<br/>highest risk</div>
+            </div>
+
+            <div class="lever-card">
+              <span class="lever-card__stage">Activation</span>
+              <div class="lever-card__title">Segmented onboarding paths.</div>
+              <div class="lever-card__body">SDRs, AEs, and founders have different workflows. One onboarding doesn't serve three personas well.</div>
+              <div class="lever-card__targets">Targets: post-install do-nothing (30%), role-specific activation</div>
+            </div>
+
+            <div class="lever-card">
+              <span class="lever-card__stage">Activation</span>
+              <div class="lever-card__title">Resurrect the dead 30%.</div>
+              <div class="lever-card__body">Users who installed and never acted are a real pool. Re-engagement email + in-extension LinkedIn prompt when they return.</div>
+              <div class="lever-card__targets">Targets: do-nothing rate directly, day-7 return</div>
+            </div>
+
+            <div class="lever-card">
+              <span class="lever-card__stage">Conversion</span>
+              <div class="lever-card__title">Credit packaging + paywall tests.</div>
+              <div class="lever-card__body">Trial credit limits calibrated to convert, upgrade nudges in context. My Prezi monetization playbook, directly applicable to Surfe credits.</div>
+              <div class="lever-card__targets">Targets: trial-to-paid, self-serve ARR</div>
+            </div>
+
+            <div class="lever-card">
+              <span class="lever-card__stage">Retention</span>
+              <div class="lever-card__title">Contact recommendations, daily.</div>
+              <div class="lever-card__body">The other feature area worth owning. A daily briefing on the dashboard, same muscle I'm teaching here.</div>
+              <div class="lever-card__targets">Targets: day-2 return, MAU% directly</div>
+            </div>
+
+            <div class="lever-card">
+              <span class="lever-card__stage">Expansion</span>
+              <div class="lever-card__title">Team invite loops.</div>
+              <div class="lever-card__body">Every activated rep is one invite from bringing in 2-3 colleagues. Viral coefficient &gt; 1 is plausible for this tool type.</div>
+              <div class="lever-card__targets">Targets: seats per account, ARR compounding</div>
+            </div>
+
+            <div class="lever-card">
+              <span class="lever-card__stage">Acquisition</span>
+              <div class="lever-card__title">Paid channel quality audit.</div>
+              <div class="lever-card__body">Different channels produce wildly different user quality. Re-score by activation-to-paid LTV, not CPA. Kill or scale based on that.</div>
+              <div class="lever-card__targets">Targets: quality of signups, self-serve ARR efficiency</div>
+            </div>
+
+            <div class="lever-card">
+              <span class="lever-card__stage">Reactivation</span>
+              <div class="lever-card__title">Churn win-back flows.</div>
+              <div class="lever-card__body">30-40% annual churn means a real pool of ex-customers. Well-timed emails + a limited-value comeback trial beat paid acquisition economics.</div>
+              <div class="lever-card__targets">Targets: reactivation rate, cheaper ARR per $</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           Slide 11: Bold future bet (AI) + close
+           ============================================================ -->
+      <section class="slide ai-slide" aria-label="Future bet and close">
+        <header class="slide-header">
+          <div class="brand">
+            <svg class="brand__logo" aria-label="Surfe" style="color: var(--color-canvas)"><use href="#surfe-logo"></use></svg>
+            <span class="brand__divider"></span>
+            <span class="brand__label">A parallel bet</span>
+          </div>
+          <span class="caption">10 &middot; A bolder bet</span>
+        </header>
+
+        <div class="slide-body">
+          <div class="ai-layout">
+            <div>
+              <div class="ai-eyebrow">Worth exploring in parallel, this year</div>
+              <h2 class="ai-title">
+                Surfe's next user<br/>
+                might not be <em>a human</em>.
+              </h2>
+              <p class="ai-body">
+                AI agents already prospect, enrich, and write to CRMs in CLI and IDE environments. They're a new buyer, a new surface, and a new workflow. The Surfe data moat is just as useful to them, if we meet them where they work.
+              </p>
+              <p class="ai-footnote">
+                Separate team, separate product shape. Not a roadmap footnote, a real bet.
+              </p>
+            </div>
+
+            <div class="ai-bullets">
+              <div class="ai-bullet">
+                <span class="ai-bullet__kicker">New surface · CLI + MCP</span>
+                <span class="ai-bullet__text">Agents live in terminals, IDEs, Claude Code-style environments. They don't browse; they call tools. Surfe ships an MCP server and a proper CLI alongside the web API.</span>
+              </div>
+              <div class="ai-bullet">
+                <span class="ai-bullet__kicker">New buyer · AI dev ecosystem</span>
+                <span class="ai-bullet__text">Not only end reps. Agent framework builders, AI sales tools (Cursor-for-sales, vertical agents). Different sales motion, different pricing, same data moat.</span>
+              </div>
+              <div class="ai-bullet">
+                <span class="ai-bullet__kicker">Moat stays human</span>
+                <span class="ai-bullet__text">Maged's right that humans still close deals. Surfe powers whatever finds them, human UI or agent tool call. The valuable layer is the data, not the screen.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Navigation dock -->
+  <nav class="nav" aria-label="Deck navigation">
+    <button class="nav__btn" type="button" data-prev aria-label="Previous slide">
+      <svg><use href="#icon-arrow-left"></use></svg>
+    </button>
+    <span class="nav__indicator" data-indicator>1 / 1</span>
+    <button class="nav__btn" type="button" data-next aria-label="Next slide">
+      <svg><use href="#icon-arrow-right"></use></svg>
+    </button>
+    <span class="nav__hint">← →  navigate</span>
+  </nav>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
